@@ -21,7 +21,7 @@ const CreateQuestionModal = ({ isOpen, onClose, onSave, category_id }) => {
           <div className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
             <div className="px-6 py-4">
               <div className="flex justify-between items-center pb-2">
-                <h2 className="text-lg font-bold">Create Question</h2>
+                <h2 className="text-lg font-bold">Add Thread</h2>
                 <span
                   className="cursor-pointer text-gray-500 hover:text-gray-700"
                   onClick={onClose}
@@ -31,7 +31,7 @@ const CreateQuestionModal = ({ isOpen, onClose, onSave, category_id }) => {
               </div>
               <div className="pb-4">
                 <label className="block text-sm font-medium text-gray-700">
-                  Question:
+                  Title:
                 </label>
                 <input
                   className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
@@ -42,7 +42,7 @@ const CreateQuestionModal = ({ isOpen, onClose, onSave, category_id }) => {
               </div>
               <div className="pb-4">
                 <label className="block text-sm font-medium text-gray-700">
-                  Correct Answer:
+                  Description:
                 </label>
                 <input
                   className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"

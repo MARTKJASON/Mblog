@@ -108,8 +108,9 @@ const ShowCategory = ({ category, auth }) => {
                     <p className="text-gray-700 mb-4">{category.description}</p>
                 </div>
 
+
                 {/* sample */}
-                <div className="max-w-xs mx-auto mt-8">
+                {/* <div className="max-w-xs mx-auto mt-8">
                     <div className="text-center mb-4">Counter: {counter}</div>
                     <div className="flex justify-center">
                         <button
@@ -125,7 +126,7 @@ const ShowCategory = ({ category, auth }) => {
                             Decrement
                         </button>
                     </div>
-                </div>
+                </div> */}
             </section>
         </AuthenticatedLayout>
     );

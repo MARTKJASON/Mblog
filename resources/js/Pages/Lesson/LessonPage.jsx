@@ -5,7 +5,7 @@ import { useState } from "react";
 import QuestionCard from "./Components/QuestionCard";
 import AddChoices from "./Components/AddChoice";
 
-const LessonPage = ({ questions, categoryTitle, auth, categoryId}) => {
+const LessonPage = ({ questions, categoryTitle, auth, categoryId, description}) => {
     const [isOpen, setIsOpen] = useState(false);
     const isAdmin = auth.user.is_admin;
     const Items = questions.length === 0;
@@ -68,23 +68,26 @@ const LessonPage = ({ questions, categoryTitle, auth, categoryId}) => {
                     onSave={onSave}
                     category_id={categoryId}
                 />
-                <div className="container mx-auto p-4 mt-[4rem]">
-                    <h1 className="text-3xl text-center font-bold mb-9">
+                <div className="container mx-[10rem] p-4 mt-[4rem]">
+                    <h1 className="text-3xl  font-bold mb-9">
                         {categoryTitle}
                     </h1>
+                    <p className="text-gray-700 mb-4 ">
+                        {description}
+</p>
                     {isAdmin ? (
                         <button
                             onClick={handleClick}
-                            className="text-green-500 hover:green-red-800 ml-[10rem]"
+                            className="text-green-500 hover:green-red-800 m-[3rem] font-bold"
                         >
-                            Add a Question
+                            Add a Thread
                         </button>
                     ) : (
                         <br />
                     )}
                     {Items ? (
-                        <h1 className="text-[20px]  text-center font-bold">
-                            No Questions
+                        <h1 className="text-[20px]  text-center font-bold text-gray-500">
+                            No Thread
                         </h1>
                     ) : (
                         <QuestionCard

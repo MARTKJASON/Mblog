@@ -19,11 +19,10 @@ const AddChoices = ({ open, handleClose, handleSaveOption , }) => {
         <>
             <Dialog open={open} onClose={handleClose}>
                 <form onSubmit={handleSubmit}>
-                    <DialogTitle>Add an option</DialogTitle>
+                    <DialogTitle>Reply Thread</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Just make sure that you added an option that is the
-                            same in correct answer
+                            Help every member to contribute on this project!
                         </DialogContentText>
                         <TextField
                             autoFocus

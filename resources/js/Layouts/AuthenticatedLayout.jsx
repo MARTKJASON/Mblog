@@ -31,7 +31,7 @@ export default function Authenticated({ user, header, children }) {
 
                                 <NavLink href={"/categories"}>
                                     {" "}
-                                    Categories
+                                    Forums
                                 </NavLink>
                             </div>
                         </div>

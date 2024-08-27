@@ -19,7 +19,8 @@ class QuestionController extends Controller
         return Inertia::render('Lesson/LessonPage', [
             'categoryTitle' => $category->title,
             'questions' => $questions,
-            'categoryId' => $category->id
+            'categoryId' => $category->id,
+            'description' => $category->description
         ]);
     }
 

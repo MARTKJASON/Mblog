@@ -47,7 +47,7 @@ const CreateCategory = ({ auth }) => {
             />
             <div className="container mx-auto p-4">
                 <form onSubmit={handleSubmit} className="mx-[25rem] mt-[3rem]">
-                    <h1 className="text-3xl font-bold mb-4">Create Category</h1>
+                    <h1 className="text-3xl font-bold mb-4">Create a Forum</h1>
                     <div className="mb-4 ">
                         <label
                             htmlFor="title"
@@ -85,7 +85,7 @@ const CreateCategory = ({ auth }) => {
                         type="submit"
                         className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 "
                     >
-                        Create Category
+                        Create Forum
                     </button>
                 </form>
             </div>
