@@ -1,0 +1,1 @@
+import{j as t}from"./app-YqbZbuVU.js";const a=({question:e})=>t.jsx(t.Fragment,{children:t.jsx("div",{className:"mt-[2rem] ",children:t.jsx("ol",{start:1,children:e.choices.map(s=>t.jsx("li",{className:"text-start text-black",children:t.jsx("button",{className:"bg-gray-500 rounded-lg m-2 text-gray-100 p-3",children:s.options})},s.id))})})});export{a as default};

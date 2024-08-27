@@ -1,0 +1,1 @@
+import{c as o}from"./app-YqbZbuVU.js";const t=o({name:"categories",initialState:[],reducers:{addCategory:(e,a)=>{e.push(a.payload)},deleteCategory:(e,a)=>e.filter(r=>r.id!==a.payload)}}),{addCategory:c,deleteCategory:i}=t.actions;t.reducer;export{c as a,i as d};
