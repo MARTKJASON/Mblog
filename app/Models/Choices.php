@@ -11,6 +11,7 @@ class Choices extends Model
     protected $fillable = [
         'question_id',
         'options',
+        'user'
     ];
 
     public function choices()

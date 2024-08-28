@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('question_id');
             $table->string('options');
+            $table->string('user');
             $table->timestamps();
         });
     }

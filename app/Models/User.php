@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Category::class);
     }
+
+    public function choices()
+    {
+        return $this->hasMany(Choices::class);
+    }
 }

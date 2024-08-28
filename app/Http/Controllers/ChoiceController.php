@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Choices;
 use App\Models\Question;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -15,10 +16,10 @@ class ChoiceController extends Controller
     public function index($question_id)
     {
         $question = Question::findorFail($question_id);
-        $choices = $question->choices;
+        $choices = $question->choices()->with('user')->get();
         return Inertia::render('Lesson/LessonPage', [
             'question' => $question,
-            'choices' => $choices
+            'userThread' => $choices,
         ]);
     }
 
@@ -44,7 +45,8 @@ class ChoiceController extends Controller
 
             Choices::create([
                 'options'  => $request->options,
-                'question_id' => $request->question_id
+                'question_id' => $request->question_id,
+                'user' => $request->user
 
             ]);
         }

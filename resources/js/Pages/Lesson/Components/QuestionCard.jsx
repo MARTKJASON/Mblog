@@ -6,9 +6,8 @@ const QuestionCard = ({
     handleChoices,
     is_admin,
     handleAddChoices,
-    handleDeleteQuestion,
+    auth,
 }) => {
-    console.log(questions)
     return (
         <>
             <div className="w-[5rem] ">
@@ -40,7 +39,8 @@ const QuestionCard = ({
                             </h1>
                             <p  className=" px-7">{question.correct_answer}</p>
 
-                            <ChoicesCard question={question} />
+                            <ChoicesCard question={question} auth={auth}
+                            />
                         </div>
                         <div></div>
                     </div>

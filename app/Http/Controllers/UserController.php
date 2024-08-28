@@ -3,15 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($users)
     {
-        //
+        return Inertia::render('Lesson/LessonPage', [
+            'question' => $users,
+        ]
+        );
     }
 
     /**

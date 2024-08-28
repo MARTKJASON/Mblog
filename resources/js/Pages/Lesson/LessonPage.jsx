@@ -9,8 +9,6 @@ const LessonPage = ({ questions, categoryTitle, auth, categoryId, description}) 
     const [isOpen, setIsOpen] = useState(false);
     const isAdmin = auth.user.is_admin;
     const Items = questions.length === 0;
-    console.log(Items);
-    // console.log(categoryId);
     const [option, setOption] = useState(false);
     const [questionId , setQuestionId] = useState(0)
 
@@ -22,9 +20,7 @@ const LessonPage = ({ questions, categoryTitle, auth, categoryId, description}) 
     };
 
     const handleChoices = (question) => {
-        // console.log(question.choices);
         setQuestionId(question.id)
-        // console.log(questionId)
     };
 
     const closeModal = () => {
@@ -35,15 +31,14 @@ const LessonPage = ({ questions, categoryTitle, auth, categoryId, description}) 
         setIsOpen(true);
     };
     const onSave = (NewQuestion) => {
-        console.log(NewQuestion);
         Inertia.post(`/category/${categoryId}/questions`, NewQuestion);
     };
     const handleSaveOption = (options) => {
-            Inertia.post(`/category/${categoryId}/questions/${questionId}/add`, { options, question_id:questionId })
-            console.log({options, question_id:questionId});
+            Inertia.post(`/category/${categoryId}/questions/${questionId}/add`, { options, question_id:questionId , user: auth.user.name})
             setOption(false);
-
     };
+
+    console.log(auth.user)
 
     const handleDeleteQuestion = (question_id) => {
         // setQuestionId(question.id)
@@ -96,6 +91,7 @@ const LessonPage = ({ questions, categoryTitle, auth, categoryId, description}) 
                             is_admin={isAdmin}
                             handleAddChoices={handleAddChoices}
                             handleDeleteQuestion={handleDeleteQuestion}
+                            auth={auth}
                         />
                     )}
                 </div>
